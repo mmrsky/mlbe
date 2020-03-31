@@ -36,8 +36,8 @@ app.get('/', (req, res, next) => {
 
 app.get('/api', (req, res) => {
     var luettelo = [
-        {"id": 0, "text": "Suomi", value: 24},
-        {"id": 0, "text": "Ruotsi", value: 30}
+        {"id": 0, "name": "Suomi", "value": 24},
+        {"id": 1, "name": "Ruotsi", "value": 30}
     ]
     
     
