@@ -36,16 +36,22 @@ app.get('/', (req, res, next) => {
 
 app.get('/api', (req, res) => {
     var luettelo = [
-        {"id": 0, "name": "Suomi", "value": 24},
-        {"id": 1, "name": "Ruotsi", "value": 30}
+        {"id": 0, "name": "Suomi", "value": 43},
+        {"id": 1, "name": "Islanti", "value": 78},
+        {"id": 2, "name": "Kiina", "value": 68},
+        {"id": 3, "name": "Meksiko", "value": 56},
+        {"id": 4, "name": "Norja", "value": 70},
+        {"id": 5, "name": "Ranska", "value": 69},
+        {"id": 6, "name": "Ruotsi", "value": 59},
+        {"id": 7, "name": "Saksa", "value": 64},
+        {"id": 8, "name": "Tanska", "value": 70},
+        {"id": 9, "name": "Turkki", "value": 46},
+        {"id": 10, "name": "Uzbekistan", "value": 29},
+        {"id": 11, "name": "Venäjä", "value": 63},
+        {"id": 12, "name": "Viro", "value": 56}
     ]
-    
-    
-    
     res.write(JSON.stringify(luettelo));
     res.end();
-    //console.log(`korvaus`);
-    //res.redirect('/');
 });
 
 app.use((req, res, next) => {
@@ -58,35 +64,3 @@ app.use((req, res, next) => {
 app.listen(port);
 
 
-
-
-// http.createServer((request, response) => {
-//   const { headers, method, url } = request;
-//   let body = [];
-//   request.on('error', (err) => {
-//     console.error(err);
-//   }).on('data', (chunk) => {
-//     body.push(chunk);
-//   }).on('end', () => {
-//     body = Buffer.concat(body).toString();
-//     // BEGINNING OF NEW STUFF
-
-//     response.on('error', (err) => {
-//       console.error(err);
-//     });
-
-//     response.statusCode = 200;
-//     response.setHeader('Content-Type', 'application/json');
-//     // Note: the 2 lines above could be replaced with this next one:
-//     // response.writeHead(200, {'Content-Type': 'application/json'})
-
-//     //const responseBody = { headers, method, url, body };
-//     const responseBody = [['Suomi',23],['Ruotsi',24],['Saksa',44]];
-//     response.write(JSON.stringify(responseBody));
-//     response.end();
-//     // Note: the 2 lines above could be replaced with this next one:
-//     // response.end(JSON.stringify(responseBody))
-
-//     // END OF NEW STUFF
-//   });
-// }).listen(port);
